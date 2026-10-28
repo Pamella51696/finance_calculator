@@ -1,0 +1,18 @@
+{
+  "name": "finance_calculator",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w @finance/api\" \"npm run dev -w @finance/web\"",
+    "build": "npm run build -w @finance/core && npm run build -w @finance/db && npm run build -w @finance/api && npm run build -w @finance/web",
+    "test": "vitest run",
+    "migrate": "npm run migrate -w @finance/db",
+    "typecheck": "npm run typecheck -w @finance/core && npm run typecheck -w @finance/db && npm run typecheck -w @finance/api && npm run typecheck -w @finance/web"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "concurrently": "^9.1.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
