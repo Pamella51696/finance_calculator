@@ -19,6 +19,17 @@
   color: #8fd3ff;
 }
 
+.sidebar-website-link {
+  font-size: 0.8rem;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+  word-break: break-all;
+}
+
+.sidebar-website-link a {
+  color: #8fd3ff;
+}
+
 .sidebar nav a {
   display: block;
   color: #c5d0dc;

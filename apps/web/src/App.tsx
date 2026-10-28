@@ -5,6 +5,7 @@ import { InvestmentsPage } from "./pages/InvestmentsPage";
 import { ReportsPage } from "./pages/ReportsPage";
 import { SettingsPage } from "./pages/SettingsPage";
 import { EmiPage } from "./pages/EmiPage";
+import { AppWebsiteLink } from "./components/AppWebsiteLink";
 
 export function App() {
   return (
@@ -14,6 +15,7 @@ export function App() {
         <p className="muted" style={{ fontSize: "0.85rem", marginTop: "-0.5rem" }}>
           Local-first · SQLite
         </p>
+        <AppWebsiteLink />
         <nav>
           <NavLink to="/" end>
             Dashboard
